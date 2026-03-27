@@ -3,7 +3,7 @@
 #endif
 
 
-/* Version number components: V=Version, R=Revision, P=Patch
+/* Version number components: V=Version, R=Revision,  P=Patch
    Version date components:   YYYY=Year, MM=Month,   DD=Day  */
 
 #if defined(__NVCC__)
