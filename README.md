@@ -164,14 +164,3 @@ diff <(xxd results/gaussian_serial_k7.png) <(xxd results/gaussian_omp_k7.png)
 | CUDA | ~20-50x |
 
 ---
-
-## ❓ أسئلة شائعة
-
-**Q: الـ kernel_size لازم يكون فردي ليه؟**
-A: عشان يكون عنده مركز واضح (مثلاً 3x3: المركز في [1,1])
-
-**Q: الـ Halo في CUDA إيه؟**
-A: الـ threads على حافة الـ tile محتاجة pixels من خارج الـ tile. الـ halo هو الجزء الإضافي اللي بنحمّله في الـ shared memory عشان نغطي الاحتياج ده.
-
-**Q: ليه Shared Memory بتسرّع؟**
-A: الـ Global Memory بطيئة (~400 cycles)، الـ Shared Memory سريعة (~4 cycles). لما كل الـ threads في الـ block بيستخدموا نفس البيانات، بنحمّلها مرة واحدة في الـ shared memory بدل ما كل thread يجيبها بنفسه.
