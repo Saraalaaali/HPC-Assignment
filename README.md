@@ -17,6 +17,8 @@ project3_image_filter/
 ├── CMakeLists.txt          # ملف البناء
 ├── run_experiments.sh      # سكريبت التجارب
 └── README.md               # الملف ده
+└── test images (input.jpg==>1920*1080 , input2.jpg==>4k)               
+
 ```
 
 ---
@@ -56,11 +58,11 @@ cd ..
 
 ### تشغيل واحد:
 ```bash
-# Serial
-./build/image_filter --image photo.jpg --filter gaussian --kernel 7 --impl serial
+# Serial (4k image)
+./build/image_filter --image input2.jpg --filter gaussian --kernel 7 --impl serial
 
-# OpenMP بـ 8 threads
-./build/image_filter --image photo.jpg --filter sobel --impl omp --threads 8
+# OpenMP بـ 8 threads (1920*1080 image)
+./build/image_filter --image input.jpg --filter sobel --impl omp --threads 8
 
 # CUDA بـ block 16x16
 ./build/image_filter --image photo.jpg --filter box --kernel 11 --impl cuda --block-x 16 --block-y 16
