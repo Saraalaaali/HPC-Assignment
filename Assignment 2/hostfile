@@ -1,0 +1,12 @@
+# Master (Local execution is faster)
+localhost slots=1
+
+# Workers on Network 1
+worker1 slots=1
+worker2 slots=1
+worker3 slots=1
+
+# Workers on Network 2
+worker4 slots=1
+worker5 slots=1
+worker6 slots=1

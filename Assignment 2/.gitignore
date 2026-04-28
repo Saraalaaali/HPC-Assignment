@@ -1,0 +1,14 @@
+# Build output
+task2_histogram_mpi
+
+# Docker volumes
+images/
+output/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
